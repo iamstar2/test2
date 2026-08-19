@@ -1,3 +1,5 @@
+from payment import charge
+
 def test_charge_called_with_amount(mocker):
     fake = mocker.patch("payment.requests.post")
     fake.return_value.json.return_value = {"status": "ok"}
